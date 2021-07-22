@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom added -->
+    <meta name="description" content="Consular information">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Nicolay Panayotov">
+    <title>CSS Template using Flexbox</title>
+    <!-- CSS -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+    * {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+    font-size: 12px;
+    text-align: justify;
+    text-align: center;
+    }
+
+    /* Style the header */
+    header {
+    background-color: #204060;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+
+    /* Container for flexboxes */
+    .row {
+    display: flex;
+    }
+
+    /* Create three unequal columns that sits next to each other */
+    .column {
+    padding: 10px;
+    }
+
+    /* Left column */
+    .column.side {
+    flex: 1;
+    background-color: #f1f1f1;
+    }
+
+    /* Middle column */
+    .column.middle {
+    flex: 2;
+    }
+
+    /* Right column */
+    .column.right {
+    flex: 1;
+    background-color: #f1f1f1;
+    }
+
+    /* Style the footer */
+    footer {
+    background-color: #204060;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+    .row {
+    flex-direction: column;
+    }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>Consular Law - Theory and Practice</header>
+
+    <!-- Main -->
+    <div class="row">
+        <!-- Left -->
+        <div class="column left">Navigation</div>
+        <!-- Middle -->
+        <div class="column middle">Main content</div>
+        <!-- Right -->
+        <div class="column right">Right</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>Copyright © 2021 Nicolay Panayotov. All rights reserved.</footer>
+</body>
+</html>
